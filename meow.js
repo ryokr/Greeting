@@ -1,5 +1,4 @@
 require('http').createServer((req, res) => res.end()).listen(4000)
-require('dotenv').config()
 const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js')
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers] })
