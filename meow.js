@@ -13,6 +13,7 @@ client.once('ready', () => {
       })
    }, 60000)
 })
+
 client.on('guildMemberAdd', (member) => {
    const channel = member.guild.channels.cache.get('758711711577538560')
 
@@ -21,11 +22,10 @@ client.on('guildMemberAdd', (member) => {
          .setColor('2B2D31')
          .setAuthor({ name: '•  ─────  •  ⬪  𝗪 𝗔 𝗦 𝗦 𝗨 𝗣 🪐 ⬪  •  ─────  •', iconURL: member.guild.iconURL() })
          .setThumbnail(member.user.displayAvatarURL())
-         .setImage('https://raw.githubusercontent.com/ryokr/Share/main/Assets/robin2.jpg?quality=lossless')
-         .setDescription(`✦ Ghé qua <id:home> để tìm hiểu server nè. \n✦ Bấm vào <id:customize> để chọn role nhé.`)
+         .setImage('https://raw.githubusercontent.com/ryokr/Share/main/Assets/robin2.jpg')
+         .setDescription(`✦ Ghé qua <id:home> để tìm hiểu server nè.\n✦ Bấm vào <id:customize> để chọn role nhé.`)
 
-      channel.send(`${member} just slid intoo **${member.guild.name}** :3`)
-      channel.send({ embeds: [embed] })
+      channel.send({ content:`${member} just slid intoo **${member.guild.name}** :3` , embeds: [embed] })
    }
 })
 
